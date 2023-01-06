@@ -239,7 +239,7 @@ a {
 /* hero image ---------------------------- */
 
 .hero-image {
-    background: #3B3B3B url(../images/hero_home.jpg) no-repeat center/cover;
+    background: #3B3B3B url(../images/hero/hero_home.jpg) no-repeat center/cover;
 }
 
 .hero-text {
@@ -994,7 +994,7 @@ footer ul {
 /* hero image ---------------------------- */
 
 .hero-image-producten {
-    background: #3B3B3B url(../images/producten_bg.jpg) no-repeat;
+    background: #3B3B3B url(../images/hero/producten_bg.jpg) no-repeat;
     background-size: cover;
     background-position-x: 65%;
     color: #EEEEEE;
