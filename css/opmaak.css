@@ -1,0 +1,1139 @@
+@import "reset.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css";
+
+/* nav --------------------- */
+
+.navcontainer {
+    background: #3B3B3B;
+}
+
+.mainnav {
+    background: #3B3B3B;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-branding img {
+    max-width: 180px;
+    padding: 5px 0;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.nav-link:hover {
+    color: #6EBBD6;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    border: 1px #6EBBD6 solid;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #6EBBD6;
+}
+
+.nav-icons {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.nav-icons a {
+    padding: 5px;
+}
+
+.fa-heart {
+    color: rgb(202, 32, 75);
+    transition: all 0.6s;
+}
+
+@keyframes beat {
+
+    0%,
+    50%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    30%,
+    80% {
+        transform: scale(1.5, 1.5);
+    }
+}
+
+.fa-heart:hover {
+    animation: 3s ease 0s infinite beat;
+}
+
+.fa-cart-shopping {
+    transition: all 0.6s;
+}
+
+.fa-cart-shopping:hover {
+    color: #6EBBD6;
+}
+
+.nav-item-companyname {
+    display: none;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 50px 0;
+    color: #6EBBD6;
+}
+
+.nav-item-companyname h1 {
+    font-size: 3rem;
+}
+
+.nav-item-companyname h2 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.active-link {
+    border-bottom: 1px solid #6EBBD6;
+}
+
+@media screen and (max-width: 1000px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 99px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #3B3B3B;
+        width: 100%;
+        transition: 0.3s;
+        height: 100%;
+        opacity: .99;
+        justify-content: flex-start;
+        z-index: 1;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item-companyname {
+        display: block;
+    }
+
+    .nav-icons {
+        flex-direction: row;
+        font-size: 2rem;
+    }
+
+    .nav-icons a {
+        padding: 0;
+        margin: 10px;
+    }
+
+    .nav-icons button {
+        margin: 10px;
+    }
+
+    .nav-branding img {
+        max-height: 80px;
+    }
+
+    .mainnav {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+/* einde nav ----------------------- */
+
+/* background ---------------------- */
+
+.background {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+.background::after {
+    content: "";
+    background: #3B3B3B url(../images/background/background-longscreen.jpg);
+    background-position: contain;
+    background-repeat: repeat;
+    opacity: 0.5;
+    top: -500px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+@media screen and (min-width: 400px) {
+    .background::after {
+        background: #3B3B3B url(../images/background/background.jpg);
+        background-position: contain;
+    }
+}
+
+@media screen and (min-width: 1925px) {
+    .background::after {
+        background: #3B3B3B url(../images/background/background-widescreen.jpg);
+        background-position: contain;
+    }
+}
+
+
+/* einde background ---------------------- */
+
+
+/* hero image ---------------------------- */
+
+.hero-image {
+    background: #3B3B3B url(../images/hero_home.jpg) no-repeat center/cover;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    min-height: 100vh;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.hero-text-background {
+    padding: 20px;
+    background: #3B3B3B;
+    opacity: 0.8;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+.hero-text h2 {
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1051px) {
+    .hero-text {
+        min-height: calc(100vh - 100px);
+    }
+}
+
+/* einde hero image ---------------------- */
+
+
+/* main ---------------------- */
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* einde main ---------------------- */
+
+
+/* product card -------------------------- */
+
+.background h1 {
+    background: none;
+    min-width: 100%;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 100px;
+    text-transform: capitalize;
+}
+
+.product-card {
+    margin: 20px 20px 150px 20px;
+    max-width: 400px;
+}
+
+.product-card img {
+    max-height: 400px;
+    width: 100%;
+    background: #3B3B3B no-repeat center/cover;
+}
+
+.product-card-background {
+    background: #EEEEEE;
+}
+
+.product-card p {
+    padding: 20px;
+}
+
+.product-card a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.product-card button {
+    transition: all 0.6s;
+}
+
+.product-card button:hover {
+    background: #2C4B57;
+    color: #EEEEEE;
+}
+
+.product-card-top button {
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 0 20px 20px 20px;
+    padding: 5px;
+    border-radius: 10px;
+    background: #6EBBD6;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.product-card-top .black-bar {
+    display: none;
+}
+
+.product-card-bottom {
+    display: none;
+}
+
+@media screen and (min-width: 1400px) {
+    .flex-container {
+        display: flex;
+    }
+
+    .product-card {
+        width: 1364px;
+        height: 643px;
+        max-width: none;
+        display: flex;
+    }
+
+    .product-card img {
+        max-height: 100%;
+    }
+
+    .product-card-top {
+        height: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .product-card-bottom {
+        height: 55%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .product-card-top button {
+        padding: 10px;
+    }
+
+    .product-card-top .black-bar {
+        display: flex;
+    }
+}
+
+/* einde product card -------------------- */
+
+/* week producten ------------------------ */
+
+.black-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #3B3B3B;
+    color: #EEEEEE;
+    margin-bottom: 30px;
+}
+
+.black-bar h2 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.weekproduct-card {
+    margin: 10px;
+    max-width: 400px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.weekproduct-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #EEEEEE;
+    font-size: 1.2rem;
+}
+
+.weekproduct-card img {
+    max-height: 400px;
+    width: 100%;
+    background: #3B3B3B no-repeat center/cover;
+}
+
+.product-card-footer {
+    padding: 0.5em;
+    background-color: #EEEEEE;
+}
+
+.product-card-footer a button {
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background: #6EBBD6;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.6s;
+}
+
+.product-card-footer a button:hover {
+    background: #2C4B57;
+    color: #EEEEEE;
+}
+
+
+.last-weekproduct-card {
+    margin-bottom: 150px;
+}
+
+@media screen and (min-width: 1400px) {
+    .weekproduct-card {
+        height: 100%;
+        margin: 0 10px;
+    }
+
+    .weekproduct-card-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background-color: #EEEEEE;
+        font-size: 1.2rem;
+    }
+
+    .weekproduct-card img {
+        width: 100%;
+        background: #3B3B3B no-repeat center/cover;
+    }
+
+    .last-weekproduct-card {
+        margin-bottom: 0;
+    }
+
+    .black-bar {
+        margin: 0;
+        height: 70px;
+    }
+
+    .product-card-footer {
+        padding: 0;
+        margin: 0;
+        background: none;
+        height: auto;
+    }
+
+    .product-card-footer a button {
+        padding: 7px;
+        margin: 5px 0;
+    }
+
+    .hide-bigscreen {
+        display: none;
+    }
+
+}
+
+
+/* einde week producten ------------------ */
+
+
+/* week menu's --------------------------- */
+
+.inspiratie-bg {
+    background: #3B3B3B;
+    color: #EEEEEE;
+    text-align: center;
+}
+
+.inspiratie-bg h3 {
+    padding: 2em 20px 1em 20px;
+    font-size: 1.2rem;
+}
+
+.inspiratie-bg hr {
+    width: 70%;
+}
+
+.inspiratie-bg h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1em 0 0.5em 0;
+}
+
+.weekmenu-card {
+    margin: 10px;
+    max-width: 160px;
+}
+
+.weekmenu-card-header {
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: #EEEEEE;
+    font-size: 1.2rem;
+    border: #EEEEEE 1px solid;
+}
+
+.weekmenu-card img {
+    max-height: 400px;
+    width: 100%;
+    background: #3B3B3B no-repeat center/cover;
+}
+
+.weekmenu-card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EEEEEE;
+    color: #3B3B3B;
+    height: 65px;
+    border-bottom: 1px #3B3B3B solid;
+}
+
+.weekmenu-card-footer {
+    padding: 0.5em;
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weekmenu-card-footer a {
+    width: 100%;
+}
+
+.weekmenu-card-footer a button {
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background: #6EBBD6;
+    border: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    transition: all 0.6s;
+}
+
+.weekmenu-card-footer a button:hover {
+    background: #2C4B57;
+    color: #EEEEEE;
+}
+
+.last-weekmenu-card {
+    margin-bottom: 50px;
+}
+
+.catering .product-card {
+    flex-direction: row-reverse;
+}
+
+@media screen and (min-width: 1000px) {
+    .big-screen {
+        display: flex;
+        justify-content: center;
+    }
+
+    .inspiratie-bg.big-screen:nth-child(2) .flex-container {
+        margin-bottom: 100px;
+    }
+
+    .last-weekmenu-card {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (min-width: 1400px) {
+    .full-screen {
+        display: flex;
+        justify-content: center;
+    }
+
+    .last-weekmenu-card {
+        margin-bottom: 100px;
+    }
+
+    .weekmenu-card {
+        margin-bottom: 100px;
+    }
+
+    .big-screen:nth-child(2) .flex-container {
+        margin-bottom: 0;
+    }
+
+}
+
+/* einde week menu's --------------------- */
+
+
+/* feestje ------------------------------- */
+
+.black-bar-feestje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #3B3B3B;
+    color: #EEEEEE;
+}
+
+.black-bar-feestje p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.black-bar-feestje a {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin: 20px;
+}
+
+.black-bar-feestje button {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background: #6EBBD6;
+    border: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    transition: all 0.6s;
+}
+
+.black-bar-feestje button:hover {
+    background: #2C4B57;
+    color: #EEEEEE;
+}
+
+.feestje {
+    min-height: 100vh;
+    background: #3B3B3B url(../images/feestje.jpg) no-repeat center/cover;
+}
+
+@media screen and (min-width: 800px) {
+    .feestje {
+        min-height: 50vh;
+    }
+
+    .black-bar-feestje a {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .feestje {
+        min-height: 80vh;
+    }
+}
+
+/* einde feestje ------------------------- */
+
+
+/* nieuwsbrief --------------------------- */
+
+.nieuwsbrief {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 150px 0 20px 0;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.nieuwsbrief-card {
+    margin: 20px 20px 150px 20px;
+    background: #EEEEEE;
+    max-width: 335px;
+}
+
+.nieuwsbrief-card-header img {
+    width: 100%;
+}
+
+.nieuwsbrief-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.nieuwsbrief-card-body p {
+    margin: 20px;
+}
+
+.nieuwsbrief-card-body img {
+    margin: 0px;
+    max-height: 100px;
+}
+
+.nieuwsbrief-card-footer {
+    margin: 20px;
+}
+
+input[type=email] {
+    height: 30px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.checkbox-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.agree {
+    font-size: .8rem;
+}
+
+.checkbox {
+    height: 20px;
+    width: 20px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    border: none;
+    background: none;
+    color: #EEEEEE;
+    font-size: 1.3rem;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+.nieuwsbrief-card-footer button {
+    margin: 20px 0;
+    background-color: rgba(255, 116, 92, 1);
+    color: #EEEEEE;
+    height: 50px;
+    width: 80%;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 400ms;
+}
+
+.nieuwsbrief-card-footer button:hover {
+    box-shadow: 0 0 1px 5px rgba(255, 116, 92, 0.4),
+        0 0 1px 10px rgba(255, 116, 92, 0.1),
+        0 0 1px 15px rgba(255, 116, 92, 0.1);
+}
+
+
+@media screen and (min-width: 1100px) {
+    .nieuwsbrief-card {
+        display: flex;
+        margin: 20px 20px 150px 20px;
+        background: #EEEEEE;
+        max-width: 100%;
+    }
+
+    .nieuwsbrief-card-right {
+        min-width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .nieuwsbrief-card-footer form {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .button-row {
+        display: flex;
+    }
+
+    .nieuwsbrief-card-footer button {
+        margin: 15px 0;
+        height: 40px;
+        background-color: #FF745C;
+        color: #EEEEEE;
+        width: 100%;
+    }
+
+    .nieuwsbrief-card-body img {
+        margin: 0px;
+        max-height: 100px;
+    }
+}
+
+/* einde nieuwsbrief --------------------- */
+
+
+/* footer -------------------------------- */
+
+footer {
+    background: #3B3B3B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.left-footer img {
+    display: block;
+    margin: 50px auto 50px auto;
+    height: 80px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-footer ul li {
+    margin: 20px;
+}
+
+.left-footer span {
+    margin-right: 10px;
+    color: #c9c9c9;
+    font-size: 1.5rem;
+}
+
+.left-footer a {
+    color: #c9c9c9;
+}
+
+.right-footer ul {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #c9c9c9;
+    margin-bottom: 120px;
+}
+
+.right-footer ul li {
+    margin: 5px;
+}
+
+.right-footer p {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #c9c9c9;
+}
+
+.right-footer ul:last-child {
+    flex-direction: column;
+}
+
+.right-footer ul:last-child li {
+    color: #c9c9c9;
+    margin: 10px 60px;
+    padding: 10px;
+    border-bottom: #c9c9c9 1px solid;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.active-footer {
+    font-weight: bold;
+}
+
+.right-footer ul:last-child li:first-of-type {
+    border-bottom: none;
+    font-size: 0.9rem;
+}
+
+@media screen and (min-width: 715px) {
+    footer .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .left-footer {
+        width: 200%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: start;
+        margin-left: 50px;
+    }
+
+    .left-footer img {
+        display: block;
+        margin: 50px 0 20px 50px;
+        height: 80px;
+    }
+
+    .left-footer ul li {
+        margin: 30px 0 0 50px;
+        font-size: 0.9rem;
+    }
+
+    .right-footer {
+        margin-left: 50px;
+    }
+
+    .right-footer {
+        width: 100%;
+        text-align: left;
+        margin-right: 50px;
+    }
+
+    .right-footer ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 80px;
+    }
+
+    .right-footer ul:last-child li {
+        margin: 10px 5px;
+        padding: 10px;
+    }
+}
+
+/* einde footer -------------------------- */
+
+
+
+/********************************************** PRODUCTEN ********************************************************/
+
+
+
+/* hero image ---------------------------- */
+
+.hero-image-producten {
+    background: #3B3B3B url(../images/producten_bg.jpg) no-repeat;
+    background-size: cover;
+    background-position-x: 65%;
+    color: #EEEEEE;
+    min-height: 65vh;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.hero-text-producten h1 {
+    position: absolute;
+    top: 30vh;
+    left: 8vw;
+    font-size: 10vw;
+    transition: all 0.6s;
+}
+
+@media screen and (min-width: 380px) {
+    .hero-text-producten h1 {
+        top: 30vh;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .hero-text-producten h1 {
+        top: 30vh;
+        left: 10vw;
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .hero-text-producten h1 {
+        left: 12vw;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .hero-text-producten h1 {
+        left: 14vw;
+        font-size: 7vw;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .hero-text-producten h1 {
+        left: 25vw;
+        font-size: 5vw;
+    }
+}
+
+
+/* einde hero image ----------------------- */
+
+
+/* producten ------------------------------ */
+
+.productpage-card-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.last-productpagecontainer .productpage-card {
+    margin-bottom: 150px;
+}
+
+.productmain .big-screen:first-of-type {
+    margin-top: 50px;
+}
+
+.productpage-card {
+    margin: 20px 10px;
+    width: 100%;
+    max-width: 328px;
+    background: #c9c9c9;
+}
+
+.productpage-card img {
+    max-height: 328px;
+    width: 100%;
+    background: #3B3B3B no-repeat center/cover;
+}
+
+.productpage-card-background {
+    background: #EEEEEE;
+}
+
+.productpage-card-header {
+    background: #3B3B3B;
+    height: 50px;
+    color: #c9c9c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+
+.productpage-card-body {
+    color: #3B3B3B;
+    margin: 10px;
+    height: 140px;
+    border-bottom: #EEEEEE 1px solid;
+    overflow-y: auto
+}
+
+.productpage-card-footer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productpage-card-footer button {
+    font-size: 1rem;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    border-radius: 10px;
+    background: #6EBBD6;
+    border: none;
+    text-transform: uppercase;
+    transition: all 0.6s;
+    font-weight: bold;
+}
+
+.productpage-card a {
+    width: 100%;
+    padding: 0 10px 10px 10px;
+}
+
+.productpage-card-footer button:hover {
+    background: #2C4B57;
+    color: #EEEEEE;
+}
+
+@media screen and (min-width: 1000px) {
+    .last-bigscreencontainer .productpage-card {
+        margin-bottom: 150px;
+    }
+}
+
+/* einde producten ------------------------ */
