@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../css/opmaak.css">
     <title>Van Echelpoel | Product Categorie</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body class="homepage">
@@ -45,48 +46,51 @@
 
     <main class="productmain-categorie">
 
+        <div class="nav-card-container">
+            <div class="nav-card">
+                <div class="nav-card-header">
+                    <h2>producten navigatie</h2>
+                    <span class="icon arrow arrow-up"></span>
+                </div>
+                <div class="nav-card-body">
+                    <ul>
+                        <li><a class="productnav-link" href="#" title="">aardappelproducten</a></li>
+                        <li><a class="productnav-link" href="#" title="">aperitiefhapjes</a></li>
+                        <li><a class="productnav-link" href="#" title="">brood</a></li>
+                        <li><a class="productnav-link" href="#" title="">fruit</a></li>
+                        <li><a class="productnav-link" href="#" title="">gebak & desserten</a></li>
+                        <li><a class="productnav-link" href="#" title="">gevogelte</a></li>
+                    </ul>
+                    <ul>
+                        <li><a class="productnav-link" href="#" title="">ijstaarten</a></li>
+                        <li><a class="productnav-link" href="#" title="">kant & klaar</a></li>
+                        <li><a class="productnav-link" href="#" title="">roomijs</a></li>
+                        <li><a class="productnav-link" href="#" title="">snacks</a></li>
+                        <li><a class="productnav-link" href="#" title="">vis</a></li>
+                        <li class="active"><a class="productnav-link" href="#" title="">vlees</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <h1>Vlees</h1>
 
         <section class="background">
 
-            <div class="nav-card">
-                <h2>producten navigatie</h2>
-                <ul>
-                    <li><a href="" title="">aardappelproducten</a></li>
-                    <li><a href="" title="">aperitiefhapjes</a></li>
-                    <li><a href="" title="">brood</a></li>
-                    <li><a href="" title="">fruit</a></li>
-                    <li><a href="" title="">gebak & desserten</a></li>
-                    <li><a href="" title="">gevogelte</a></li>
-                    <li><a href="" title="">ijstaarten</a></li>
-                    <li><a href="" title="">kant & klaar</a></li>
-                    <li><a href="" title="">roomijs</a></li>
-                    <li><a href="" title="">snacks</a></li>
-                    <li><a href="" title="">vis</a></li>
-                    <li><a class="active" href="" title="">vlees</a></li>
-                </ul>
-            </div>
-
             <div class="container">
 
-                <div class="big-screen">
-                    <div class="product-categoriecard-container">
-
-                        <div class="categoriecard">
-                            <div class="categoriecard-imagecontainer">
-                                <span class="heart-number">
-                                    <span><a href="" class="fa-solid fa-heart"></a></span>
-                                    <span class="sr-only">Favoriete producten</span>
-                                    <span class="number">2</span>
-                                </span>
-                                <img src="../images/product-card.jpg" alt="">
-                            </div>
-                            <div class="categoriecard-header">
-                                <h2>aardappelproducten</h2>
-                            </div>
-                            <div class="categoriecard-body">
-                                <div class="categoriecard-body-top">
-                                    <div class="categoriecard-body-top-left">
+                <div class="container-xl">
+                    <div class="container-m">
+                        <div class="flex-container">
+                            <article class="categoriecard">
+                                <span><a href="#" class="fa-solid fa-heart"></a></span>
+                                <span class="sr-only">Favoriete producten</span>
+                                <figure>
+                                    <img src="../images/product-card.jpg" alt="">
+                                    <figcaption>rundsburger</figcaption>
+                                </figure>
+                                <section class="data">
+                                    <div>
                                         <span>
                                             <span class="fa-solid fa-weight-hanging"></span>
                                             <span class="sr-only">gewicht</span>
@@ -98,44 +102,46 @@
                                             <ul>
                                                 <li>lactose</li>
                                                 <li>noten</li>
+                                                <li>gluten</li>
+                                            </ul>
+                                            <ul>
+                                                <li>ei</li>
+                                                <li>soja</li>
+                                                <li>pinda</li>
                                             </ul>
                                         </span>
                                     </div>
-                                    <span>
+
+                                    <div class="shoppingcard" href="#" title="">
+                                        <p class="number">0</p>
                                         <span class="fa-solid fa-cart-shopping"></span>
                                         <span class="sr-only">Winkelwagen</span>
-                                    </span>
-                                </div>
-                                <div class="categoriecard-body-bottom">
-                                    <span>
-                                        <p>€5.70</p>
-                                        <p>(€14.25/kg - 1.14€/stuk)</p>
-                                    </span>
-                                    <span>
-                                        <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="categoriecard-footer">
-                                <a href="#" title=""><button>details</button></a>
-                            </div>
+                                    </div>
+
+                                </section>
+                                <section class="price">
+                                    <ul>
+                                        <li>€5.70</li>
+                                        <li>(€14.25/kg - 1.14/stuk)</li>
+                                    </ul>
+                                    <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="nutriscore">
+                                </section>
+                                <section class="details">
+                                    <a href="#" title="">Details</a>
+                                </section>
+                            </article>
                         </div>
 
-                        <div class="categoriecard">
-                            <div class="categoriecard-imagecontainer">
-                                <span class="heart-number">
-                                    <span><a href="" class="fa-solid fa-heart"></a></span>
-                                    <span class="sr-only">Favoriete producten</span>
-                                    <span class="number">2</span>
-                                </span>
-                                <img src="../images/product-card.jpg" alt="">
-                            </div>
-                            <div class="categoriecard-header">
-                                <h2>aardappelproducten</h2>
-                            </div>
-                            <div class="categoriecard-body">
-                                <div class="categoriecard-body-top">
-                                    <div class="categoriecard-body-top-left">
+                        <div class="flex-container">
+                            <article class="categoriecard">
+                                <span><a href="#" class="fa-solid fa-heart"></a></span>
+                                <span class="sr-only">Favoriete producten</span>
+                                <figure>
+                                    <img src="../images/product-card.jpg" alt="">
+                                    <figcaption>rundsburger</figcaption>
+                                </figure>
+                                <section class="data">
+                                    <div>
                                         <span>
                                             <span class="fa-solid fa-weight-hanging"></span>
                                             <span class="sr-only">gewicht</span>
@@ -147,44 +153,48 @@
                                             <ul>
                                                 <li>lactose</li>
                                                 <li>noten</li>
+                                                <li>gluten</li>
+                                            </ul>
+                                            <ul>
+                                                <li>ei</li>
+                                                <li>soja</li>
+                                                <li>pinda</li>
                                             </ul>
                                         </span>
                                     </div>
-                                    <span>
+
+                                    <div class="shoppingcard" href="#" title="">
+                                        <p class="number">0</p>
                                         <span class="fa-solid fa-cart-shopping"></span>
                                         <span class="sr-only">Winkelwagen</span>
-                                    </span>
-                                </div>
-                                <div class="categoriecard-body-bottom">
-                                    <span>
-                                        <p>€5.70</p>
-                                        <p>(€14.25/kg - 1.14€/stuk)</p>
-                                    </span>
-                                    <span>
-                                        <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="categoriecard-footer">
-                                <a href="#" title=""><button>details</button></a>
-                            </div>
-                        </div>
+                                    </div>
 
-                        <div class="categoriecard">
-                            <div class="categoriecard-imagecontainer">
-                                <span class="heart-number">
-                                    <span><a href="" class="fa-solid fa-heart"></a></span>
-                                    <span class="sr-only">Favoriete producten</span>
-                                    <span class="number">2</span>
-                                </span>
-                                <img src="../images/product-card.jpg" alt="">
-                            </div>
-                            <div class="categoriecard-header">
-                                <h2>aardappelproducten</h2>
-                            </div>
-                            <div class="categoriecard-body">
-                                <div class="categoriecard-body-top">
-                                    <div class="categoriecard-body-top-left">
+                                </section>
+                                <section class="price">
+                                    <ul>
+                                        <li>€5.70</li>
+                                        <li>(€14.25/kg - 1.14/stuk)</li>
+                                    </ul>
+                                    <img src="../images/nutri score/NUTRI-SCORE-B.png" alt="nutriscore">
+                                </section>
+                                <section class="details">
+                                    <a href="#" title="">Details</a>
+                                </section>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="container-m">
+                        <div class="flex-container">
+                            <article class="categoriecard">
+                                <span><a href="#" class="fa-solid fa-heart"></a></span>
+                                <span class="sr-only">Favoriete producten</span>
+                                <figure>
+                                    <img src="../images/product-card.jpg" alt="">
+                                    <figcaption>rundsburger</figcaption>
+                                </figure>
+                                <section class="data">
+                                    <div>
                                         <span>
                                             <span class="fa-solid fa-weight-hanging"></span>
                                             <span class="sr-only">gewicht</span>
@@ -196,50 +206,103 @@
                                             <ul>
                                                 <li>lactose</li>
                                                 <li>noten</li>
+                                                <li>gluten</li>
+                                            </ul>
+                                            <ul>
+                                                <li>ei</li>
+                                                <li>soja</li>
+                                                <li>pinda</li>
                                             </ul>
                                         </span>
                                     </div>
-                                    <span>
+
+                                    <div class="shoppingcard" href="#" title="">
+                                        <p class="number">0</p>
                                         <span class="fa-solid fa-cart-shopping"></span>
                                         <span class="sr-only">Winkelwagen</span>
-                                    </span>
-                                </div>
-                                <div class="categoriecard-body-bottom">
-                                    <span>
-                                        <p>€5.70</p>
-                                        <p>(€14.25/kg - 1.14€/stuk)</p>
-                                    </span>
-                                    <span>
-                                        <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="categoriecard-footer">
-                                <a href="#" title=""><button>details</button></a>
-                            </div>
+                                    </div>
+
+                                </section>
+                                <section class="price">
+                                    <ul>
+                                        <li>€5.70</li>
+                                        <li>(€14.25/kg - 1.14/stuk)</li>
+                                    </ul>
+                                    <img src="../images/nutri score/NUTRI-SCORE-C.png" alt="nutriscore">
+                                </section>
+                                <section class="details">
+                                    <a href="#" title="">Details</a>
+                                </section>
+                            </article>
                         </div>
 
+                        <div class="flex-container">
+                            <article class="categoriecard">
+                                <span><a href="#" class="fa-solid fa-heart"></a></span>
+                                <span class="sr-only">Favoriete producten</span>
+                                <figure>
+                                    <img src="../images/product-card.jpg" alt="">
+                                    <figcaption>rundsburger</figcaption>
+                                </figure>
+                                <section class="data">
+                                    <div>
+                                        <span>
+                                            <span class="fa-solid fa-weight-hanging"></span>
+                                            <span class="sr-only">gewicht</span>
+                                            <p>5x 80g</p>
+                                        </span>
+                                        <span>
+                                            <span class="fa-solid fa-wheat-awn-circle-exclamation"></span>
+                                            <span class="sr-only">allergieën</span>
+                                            <ul>
+                                                <li>lactose</li>
+                                                <li>noten</li>
+                                                <li>gluten</li>
+                                            </ul>
+                                            <ul>
+                                                <li>ei</li>
+                                                <li>soja</li>
+                                                <li>pinda</li>
+                                            </ul>
+                                        </span>
+                                    </div>
+
+                                    <div class="shoppingcard" href="#" title="">
+                                        <p class="number">0</p>
+                                        <span class="fa-solid fa-cart-shopping"></span>
+                                        <span class="sr-only">Winkelwagen</span>
+                                    </div>
+
+                                </section>
+                                <section class="price">
+                                    <ul>
+                                        <li>€5.70</li>
+                                        <li>(€14.25/kg - 1.14/stuk)</li>
+                                    </ul>
+                                    <img src="../images/nutri score/NUTRI-SCORE-D.png" alt="nutriscore">
+                                </section>
+                                <section class="details">
+                                    <a href="#" title="">Details</a>
+                                </section>
+                            </article>
+                        </div>
                     </div>
                 </div>
 
-                <div class="big-screen">
-                    <div class="product-categoriecard-container">
 
-                        <div class="categoriecard">
-                            <div class="categoriecard-imagecontainer">
-                                <span class="heart-number">
-                                    <span><a href="" class="fa-solid fa-heart"></a></span>
-                                    <span class="sr-only">Favoriete producten</span>
-                                    <span class="number">2</span>
-                                </span>
-                                <img src="../images/product-card.jpg" alt="">
-                            </div>
-                            <div class="categoriecard-header">
-                                <h2>aardappelproducten</h2>
-                            </div>
-                            <div class="categoriecard-body">
-                                <div class="categoriecard-body-top">
-                                    <div class="categoriecard-body-top-left">
+
+                <div class="container-xl">
+                    <div class="container-m">
+                        <div class="flex-container">
+                            <article class="categoriecard">
+                                <span><a href="#" class="fa-solid fa-heart"></a></span>
+                                <span class="sr-only">Favoriete producten</span>
+                                <figure>
+                                    <img src="../images/product-card.jpg" alt="">
+                                    <figcaption>rundsburger</figcaption>
+                                </figure>
+                                <section class="data">
+                                    <div>
                                         <span>
                                             <span class="fa-solid fa-weight-hanging"></span>
                                             <span class="sr-only">gewicht</span>
@@ -251,44 +314,46 @@
                                             <ul>
                                                 <li>lactose</li>
                                                 <li>noten</li>
+                                                <li>gluten</li>
+                                            </ul>
+                                            <ul>
+                                                <li>ei</li>
+                                                <li>soja</li>
+                                                <li>pinda</li>
                                             </ul>
                                         </span>
                                     </div>
-                                    <span>
+
+                                    <div class="shoppingcard" href="#" title="">
+                                        <p class="number">0</p>
                                         <span class="fa-solid fa-cart-shopping"></span>
                                         <span class="sr-only">Winkelwagen</span>
-                                    </span>
-                                </div>
-                                <div class="categoriecard-body-bottom">
-                                    <span>
-                                        <p>€5.70</p>
-                                        <p>(€14.25/kg - 1.14€/stuk)</p>
-                                    </span>
-                                    <span>
-                                        <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="categoriecard-footer">
-                                <a href="#" title=""><button>details</button></a>
-                            </div>
+                                    </div>
+
+                                </section>
+                                <section class="price">
+                                    <ul>
+                                        <li>€5.70</li>
+                                        <li>(€14.25/kg - 1.14/stuk)</li>
+                                    </ul>
+                                    <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="nutriscore">
+                                </section>
+                                <section class="details">
+                                    <a href="#" title="">Details</a>
+                                </section>
+                            </article>
                         </div>
 
-                        <div class="categoriecard">
-                            <div class="categoriecard-imagecontainer">
-                                <span class="heart-number">
-                                    <span><a href="" class="fa-solid fa-heart"></a></span>
-                                    <span class="sr-only">Favoriete producten</span>
-                                    <span class="number">2</span>
-                                </span>
-                                <img src="../images/product-card.jpg" alt="">
-                            </div>
-                            <div class="categoriecard-header">
-                                <h2>aardappelproducten</h2>
-                            </div>
-                            <div class="categoriecard-body">
-                                <div class="categoriecard-body-top">
-                                    <div class="categoriecard-body-top-left">
+                        <div class="flex-container">
+                            <article class="categoriecard">
+                                <span><a href="#" class="fa-solid fa-heart"></a></span>
+                                <span class="sr-only">Favoriete producten</span>
+                                <figure>
+                                    <img src="../images/product-card.jpg" alt="">
+                                    <figcaption>rundsburger</figcaption>
+                                </figure>
+                                <section class="data">
+                                    <div>
                                         <span>
                                             <span class="fa-solid fa-weight-hanging"></span>
                                             <span class="sr-only">gewicht</span>
@@ -300,44 +365,48 @@
                                             <ul>
                                                 <li>lactose</li>
                                                 <li>noten</li>
+                                                <li>gluten</li>
+                                            </ul>
+                                            <ul>
+                                                <li>ei</li>
+                                                <li>soja</li>
+                                                <li>pinda</li>
                                             </ul>
                                         </span>
                                     </div>
-                                    <span>
+
+                                    <div class="shoppingcard" href="#" title="">
+                                        <p class="number">0</p>
                                         <span class="fa-solid fa-cart-shopping"></span>
                                         <span class="sr-only">Winkelwagen</span>
-                                    </span>
-                                </div>
-                                <div class="categoriecard-body-bottom">
-                                    <span>
-                                        <p>€5.70</p>
-                                        <p>(€14.25/kg - 1.14€/stuk)</p>
-                                    </span>
-                                    <span>
-                                        <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="categoriecard-footer">
-                                <a href="#" title=""><button>details</button></a>
-                            </div>
-                        </div>
+                                    </div>
 
-                        <div class="categoriecard">
-                            <div class="categoriecard-imagecontainer">
-                                <span class="heart-number">
-                                    <span><a href="" class="fa-solid fa-heart"></a></span>
-                                    <span class="sr-only">Favoriete producten</span>
-                                    <span class="number">2</span>
-                                </span>
-                                <img src="../images/product-card.jpg" alt="">
-                            </div>
-                            <div class="categoriecard-header">
-                                <h2>aardappelproducten</h2>
-                            </div>
-                            <div class="categoriecard-body">
-                                <div class="categoriecard-body-top">
-                                    <div class="categoriecard-body-top-left">
+                                </section>
+                                <section class="price">
+                                    <ul>
+                                        <li>€5.70</li>
+                                        <li>(€14.25/kg - 1.14/stuk)</li>
+                                    </ul>
+                                    <img src="../images/nutri score/NUTRI-SCORE-B.png" alt="nutriscore">
+                                </section>
+                                <section class="details">
+                                    <a href="#" title="">Details</a>
+                                </section>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="container-m">
+                        <div class="flex-container">
+                            <article class="categoriecard">
+                                <span><a href="#" class="fa-solid fa-heart"></a></span>
+                                <span class="sr-only">Favoriete producten</span>
+                                <figure>
+                                    <img src="../images/product-card.jpg" alt="">
+                                    <figcaption>rundsburger</figcaption>
+                                </figure>
+                                <section class="data">
+                                    <div>
                                         <span>
                                             <span class="fa-solid fa-weight-hanging"></span>
                                             <span class="sr-only">gewicht</span>
@@ -349,50 +418,103 @@
                                             <ul>
                                                 <li>lactose</li>
                                                 <li>noten</li>
+                                                <li>gluten</li>
+                                            </ul>
+                                            <ul>
+                                                <li>ei</li>
+                                                <li>soja</li>
+                                                <li>pinda</li>
                                             </ul>
                                         </span>
                                     </div>
-                                    <span>
+
+                                    <div class="shoppingcard" href="#" title="">
+                                        <p class="number">0</p>
                                         <span class="fa-solid fa-cart-shopping"></span>
                                         <span class="sr-only">Winkelwagen</span>
-                                    </span>
-                                </div>
-                                <div class="categoriecard-body-bottom">
-                                    <span>
-                                        <p>€5.70</p>
-                                        <p>(€14.25/kg - 1.14€/stuk)</p>
-                                    </span>
-                                    <span>
-                                        <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="categoriecard-footer">
-                                <a href="#" title=""><button>details</button></a>
-                            </div>
+                                    </div>
+
+                                </section>
+                                <section class="price">
+                                    <ul>
+                                        <li>€5.70</li>
+                                        <li>(€14.25/kg - 1.14/stuk)</li>
+                                    </ul>
+                                    <img src="../images/nutri score/NUTRI-SCORE-C.png" alt="nutriscore">
+                                </section>
+                                <section class="details">
+                                    <a href="#" title="">Details</a>
+                                </section>
+                            </article>
                         </div>
 
+                        <div class="flex-container">
+                            <article class="categoriecard">
+                                <span><a href="#" class="fa-solid fa-heart"></a></span>
+                                <span class="sr-only">Favoriete producten</span>
+                                <figure>
+                                    <img src="../images/product-card.jpg" alt="">
+                                    <figcaption>rundsburger</figcaption>
+                                </figure>
+                                <section class="data">
+                                    <div>
+                                        <span>
+                                            <span class="fa-solid fa-weight-hanging"></span>
+                                            <span class="sr-only">gewicht</span>
+                                            <p>5x 80g</p>
+                                        </span>
+                                        <span>
+                                            <span class="fa-solid fa-wheat-awn-circle-exclamation"></span>
+                                            <span class="sr-only">allergieën</span>
+                                            <ul>
+                                                <li>lactose</li>
+                                                <li>noten</li>
+                                                <li>gluten</li>
+                                            </ul>
+                                            <ul>
+                                                <li>ei</li>
+                                                <li>soja</li>
+                                                <li>pinda</li>
+                                            </ul>
+                                        </span>
+                                    </div>
+
+                                    <div class="shoppingcard" href="#" title="">
+                                        <p class="number">0</p>
+                                        <span class="fa-solid fa-cart-shopping"></span>
+                                        <span class="sr-only">Winkelwagen</span>
+                                    </div>
+
+                                </section>
+                                <section class="price">
+                                    <ul>
+                                        <li>€5.70</li>
+                                        <li>(€14.25/kg - 1.14/stuk)</li>
+                                    </ul>
+                                    <img src="../images/nutri score/NUTRI-SCORE-D.png" alt="nutriscore">
+                                </section>
+                                <section class="details">
+                                    <a href="#" title="">Details</a>
+                                </section>
+                            </article>
+                        </div>
                     </div>
                 </div>
 
-                <div class="big-screen">
-                    <div class="product-categoriecard-container">
 
-                        <div class="categoriecard">
-                            <div class="categoriecard-imagecontainer">
-                                <span class="heart-number">
-                                    <span><a href="" class="fa-solid fa-heart"></a></span>
-                                    <span class="sr-only">Favoriete producten</span>
-                                    <span class="number">2</span>
-                                </span>
-                                <img src="../images/product-card.jpg" alt="">
-                            </div>
-                            <div class="categoriecard-header">
-                                <h2>aardappelproducten</h2>
-                            </div>
-                            <div class="categoriecard-body">
-                                <div class="categoriecard-body-top">
-                                    <div class="categoriecard-body-top-left">
+
+                <div class="container-xl">
+                    <div class="container-m">
+                        <div class="flex-container">
+                            <article class="categoriecard">
+                                <span><a href="#" class="fa-solid fa-heart"></a></span>
+                                <span class="sr-only">Favoriete producten</span>
+                                <figure>
+                                    <img src="../images/product-card.jpg" alt="">
+                                    <figcaption>rundsburger</figcaption>
+                                </figure>
+                                <section class="data">
+                                    <div>
                                         <span>
                                             <span class="fa-solid fa-weight-hanging"></span>
                                             <span class="sr-only">gewicht</span>
@@ -404,44 +526,46 @@
                                             <ul>
                                                 <li>lactose</li>
                                                 <li>noten</li>
+                                                <li>gluten</li>
+                                            </ul>
+                                            <ul>
+                                                <li>ei</li>
+                                                <li>soja</li>
+                                                <li>pinda</li>
                                             </ul>
                                         </span>
                                     </div>
-                                    <span>
+
+                                    <div class="shoppingcard" href="#" title="">
+                                        <p class="number">0</p>
                                         <span class="fa-solid fa-cart-shopping"></span>
                                         <span class="sr-only">Winkelwagen</span>
-                                    </span>
-                                </div>
-                                <div class="categoriecard-body-bottom">
-                                    <span>
-                                        <p>€5.70</p>
-                                        <p>(€14.25/kg - 1.14€/stuk)</p>
-                                    </span>
-                                    <span>
-                                        <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="categoriecard-footer">
-                                <a href="#" title=""><button>details</button></a>
-                            </div>
+                                    </div>
+
+                                </section>
+                                <section class="price">
+                                    <ul>
+                                        <li>€5.70</li>
+                                        <li>(€14.25/kg - 1.14/stuk)</li>
+                                    </ul>
+                                    <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="nutriscore">
+                                </section>
+                                <section class="details">
+                                    <a href="#" title="">Details</a>
+                                </section>
+                            </article>
                         </div>
 
-                        <div class="categoriecard">
-                            <div class="categoriecard-imagecontainer">
-                                <span class="heart-number">
-                                    <span><a href="" class="fa-solid fa-heart"></a></span>
-                                    <span class="sr-only">Favoriete producten</span>
-                                    <span class="number">2</span>
-                                </span>
-                                <img src="../images/product-card.jpg" alt="">
-                            </div>
-                            <div class="categoriecard-header">
-                                <h2>aardappelproducten</h2>
-                            </div>
-                            <div class="categoriecard-body">
-                                <div class="categoriecard-body-top">
-                                    <div class="categoriecard-body-top-left">
+                        <div class="flex-container">
+                            <article class="categoriecard">
+                                <span><a href="#" class="fa-solid fa-heart"></a></span>
+                                <span class="sr-only">Favoriete producten</span>
+                                <figure>
+                                    <img src="../images/product-card.jpg" alt="">
+                                    <figcaption>rundsburger</figcaption>
+                                </figure>
+                                <section class="data">
+                                    <div>
                                         <span>
                                             <span class="fa-solid fa-weight-hanging"></span>
                                             <span class="sr-only">gewicht</span>
@@ -453,99 +577,48 @@
                                             <ul>
                                                 <li>lactose</li>
                                                 <li>noten</li>
+                                                <li>gluten</li>
                                             </ul>
-                                        </span>
-                                    </div>
-                                    <span>
-                                        <span class="fa-solid fa-cart-shopping"></span>
-                                        <span class="sr-only">Winkelwagen</span>
-                                    </span>
-                                </div>
-                                <div class="categoriecard-body-bottom">
-                                    <span>
-                                        <p>€5.70</p>
-                                        <p>(€14.25/kg - 1.14€/stuk)</p>
-                                    </span>
-                                    <span>
-                                        <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="categoriecard-footer">
-                                <a href="#" title=""><button>details</button></a>
-                            </div>
-                        </div>
-
-                        <div class="categoriecard">
-                            <div class="categoriecard-imagecontainer">
-                                <span class="heart-number">
-                                    <span><a href="" class="fa-solid fa-heart"></a></span>
-                                    <span class="sr-only">Favoriete producten</span>
-                                    <span class="number">2</span>
-                                </span>
-                                <img src="../images/product-card.jpg" alt="">
-                            </div>
-                            <div class="categoriecard-header">
-                                <h2>aardappelproducten</h2>
-                            </div>
-                            <div class="categoriecard-body">
-                                <div class="categoriecard-body-top">
-                                    <div class="categoriecard-body-top-left">
-                                        <span>
-                                            <span class="fa-solid fa-weight-hanging"></span>
-                                            <span class="sr-only">gewicht</span>
-                                            <p>5x 80g</p>
-                                        </span>
-                                        <span>
-                                            <span class="fa-solid fa-wheat-awn-circle-exclamation"></span>
-                                            <span class="sr-only">allergieën</span>
                                             <ul>
-                                                <li>lactose</li>
-                                                <li>noten</li>
+                                                <li>ei</li>
+                                                <li>soja</li>
+                                                <li>pinda</li>
                                             </ul>
                                         </span>
                                     </div>
-                                    <span>
+
+                                    <div class="shoppingcard" href="#" title="">
+                                        <p class="number">0</p>
                                         <span class="fa-solid fa-cart-shopping"></span>
                                         <span class="sr-only">Winkelwagen</span>
-                                    </span>
-                                </div>
-                                <div class="categoriecard-body-bottom">
-                                    <span>
-                                        <p>€5.70</p>
-                                        <p>(€14.25/kg - 1.14€/stuk)</p>
-                                    </span>
-                                    <span>
-                                        <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="categoriecard-footer">
-                                <a href="#" title=""><button>details</button></a>
-                            </div>
-                        </div>
+                                    </div>
 
+                                </section>
+                                <section class="price">
+                                    <ul>
+                                        <li>€5.70</li>
+                                        <li>(€14.25/kg - 1.14/stuk)</li>
+                                    </ul>
+                                    <img src="../images/nutri score/NUTRI-SCORE-B.png" alt="nutriscore">
+                                </section>
+                                <section class="details">
+                                    <a href="#" title="">Details</a>
+                                </section>
+                            </article>
+                        </div>
                     </div>
-                </div>
 
-                <div class="big-screen">
-                    <div class="product-categoriecard-container">
-
-                        <div class="categoriecard">
-                            <div class="categoriecard-imagecontainer">
-                                <span class="heart-number">
-                                    <span><a href="" class="fa-solid fa-heart"></a></span>
-                                    <span class="sr-only">Favoriete producten</span>
-                                    <span class="number">2</span>
-                                </span>
-                                <img src="../images/product-card.jpg" alt="">
-                            </div>
-                            <div class="categoriecard-header">
-                                <h2>aardappelproducten</h2>
-                            </div>
-                            <div class="categoriecard-body">
-                                <div class="categoriecard-body-top">
-                                    <div class="categoriecard-body-top-left">
+                    <div class="container-m">
+                        <div class="flex-container">
+                            <article class="categoriecard">
+                                <span><a href="#" class="fa-solid fa-heart"></a></span>
+                                <span class="sr-only">Favoriete producten</span>
+                                <figure>
+                                    <img src="../images/product-card.jpg" alt="">
+                                    <figcaption>rundsburger</figcaption>
+                                </figure>
+                                <section class="data">
+                                    <div>
                                         <span>
                                             <span class="fa-solid fa-weight-hanging"></span>
                                             <span class="sr-only">gewicht</span>
@@ -557,44 +630,46 @@
                                             <ul>
                                                 <li>lactose</li>
                                                 <li>noten</li>
+                                                <li>gluten</li>
+                                            </ul>
+                                            <ul>
+                                                <li>ei</li>
+                                                <li>soja</li>
+                                                <li>pinda</li>
                                             </ul>
                                         </span>
                                     </div>
-                                    <span>
+
+                                    <div class="shoppingcard" href="#" title="">
+                                        <p class="number">0</p>
                                         <span class="fa-solid fa-cart-shopping"></span>
                                         <span class="sr-only">Winkelwagen</span>
-                                    </span>
-                                </div>
-                                <div class="categoriecard-body-bottom">
-                                    <span>
-                                        <p>€5.70</p>
-                                        <p>(€14.25/kg - 1.14€/stuk)</p>
-                                    </span>
-                                    <span>
-                                        <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="categoriecard-footer">
-                                <a href="#" title=""><button>details</button></a>
-                            </div>
+                                    </div>
+
+                                </section>
+                                <section class="price">
+                                    <ul>
+                                        <li>€5.70</li>
+                                        <li>(€14.25/kg - 1.14/stuk)</li>
+                                    </ul>
+                                    <img src="../images/nutri score/NUTRI-SCORE-C.png" alt="nutriscore">
+                                </section>
+                                <section class="details">
+                                    <a href="#" title="">Details</a>
+                                </section>
+                            </article>
                         </div>
 
-                        <div class="categoriecard">
-                            <div class="categoriecard-imagecontainer">
-                                <span class="heart-number">
-                                    <span><a href="" class="fa-solid fa-heart"></a></span>
-                                    <span class="sr-only">Favoriete producten</span>
-                                    <span class="number">2</span>
-                                </span>
-                                <img src="../images/product-card.jpg" alt="">
-                            </div>
-                            <div class="categoriecard-header">
-                                <h2>aardappelproducten</h2>
-                            </div>
-                            <div class="categoriecard-body">
-                                <div class="categoriecard-body-top">
-                                    <div class="categoriecard-body-top-left">
+                        <div class="flex-container">
+                            <article class="categoriecard">
+                                <span><a href="#" class="fa-solid fa-heart"></a></span>
+                                <span class="sr-only">Favoriete producten</span>
+                                <figure>
+                                    <img src="../images/product-card.jpg" alt="">
+                                    <figcaption>rundsburger</figcaption>
+                                </figure>
+                                <section class="data">
+                                    <div>
                                         <span>
                                             <span class="fa-solid fa-weight-hanging"></span>
                                             <span class="sr-only">gewicht</span>
@@ -606,82 +681,40 @@
                                             <ul>
                                                 <li>lactose</li>
                                                 <li>noten</li>
+                                                <li>gluten</li>
                                             </ul>
-                                        </span>
-                                    </div>
-                                    <span>
-                                        <span class="fa-solid fa-cart-shopping"></span>
-                                        <span class="sr-only">Winkelwagen</span>
-                                    </span>
-                                </div>
-                                <div class="categoriecard-body-bottom">
-                                    <span>
-                                        <p>€5.70</p>
-                                        <p>(€14.25/kg - 1.14€/stuk)</p>
-                                    </span>
-                                    <span>
-                                        <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="categoriecard-footer">
-                                <a href="#" title=""><button>details</button></a>
-                            </div>
-                        </div>
-
-                        <div class="categoriecard">
-                            <div class="categoriecard-imagecontainer">
-                                <span class="heart-number">
-                                    <span><a href="" class="fa-solid fa-heart"></a></span>
-                                    <span class="sr-only">Favoriete producten</span>
-                                    <span class="number">2</span>
-                                </span>
-                                <img src="../images/product-card.jpg" alt="">
-                            </div>
-                            <div class="categoriecard-header">
-                                <h2>aardappelproducten</h2>
-                            </div>
-                            <div class="categoriecard-body">
-                                <div class="categoriecard-body-top">
-                                    <div class="categoriecard-body-top-left">
-                                        <span>
-                                            <span class="fa-solid fa-weight-hanging"></span>
-                                            <span class="sr-only">gewicht</span>
-                                            <p>5x 80g</p>
-                                        </span>
-                                        <span>
-                                            <span class="fa-solid fa-wheat-awn-circle-exclamation"></span>
-                                            <span class="sr-only">allergieën</span>
                                             <ul>
-                                                <li>lactose</li>
-                                                <li>noten</li>
+                                                <li>ei</li>
+                                                <li>soja</li>
+                                                <li>pinda</li>
                                             </ul>
                                         </span>
                                     </div>
-                                    <span>
+
+                                    <div class="shoppingcard" href="#" title="">
+                                        <p class="number">0</p>
                                         <span class="fa-solid fa-cart-shopping"></span>
                                         <span class="sr-only">Winkelwagen</span>
-                                    </span>
-                                </div>
-                                <div class="categoriecard-body-bottom">
-                                    <span>
-                                        <p>€5.70</p>
-                                        <p>(€14.25/kg - 1.14€/stuk)</p>
-                                    </span>
-                                    <span>
-                                        <img src="../images/nutri score/NUTRI-SCORE-A.png" alt="">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="categoriecard-footer">
-                                <a href="#" title=""><button>details</button></a>
-                            </div>
-                        </div>
+                                    </div>
 
+                                </section>
+                                <section class="price">
+                                    <ul>
+                                        <li>€5.70</li>
+                                        <li>(€14.25/kg - 1.14/stuk)</li>
+                                    </ul>
+                                    <img src="../images/nutri score/NUTRI-SCORE-D.png" alt="nutriscore">
+                                </section>
+                                <section class="details">
+                                    <a href="#" title="">Details</a>
+                                </section>
+                            </article>
+                        </div>
                     </div>
                 </div>
 
             </div>
+
         </section>
 
     </main>
