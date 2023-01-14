@@ -208,8 +208,6 @@ a {
 .background::after {
     content: "";
     background: #3B3B3B url(../images/background/background-longscreen.jpg);
-    background-position: contain;
-    background-repeat: repeat;
     opacity: 0.5;
     top: -500px;
     left: 0;
@@ -222,14 +220,12 @@ a {
 @media screen and (min-width: 400px) {
     .background::after {
         background: #3B3B3B url(../images/background/background.jpg);
-        background-position: contain;
     }
 }
 
 @media screen and (min-width: 1925px) {
     .background::after {
         background: #3B3B3B url(../images/background/background-widescreen.jpg);
-        background-position: contain;
     }
 }
 
@@ -377,6 +373,7 @@ button {
 
     .product-card img {
         max-height: 100%;
+        object-fit: cover;
     }
 
     .product-card-top {
@@ -390,6 +387,8 @@ button {
         height: 55%;
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
     }
 
     .product-card-top button {
@@ -426,6 +425,7 @@ button {
     max-width: 400px;
     text-transform: capitalize;
     font-weight: bold;
+    height: 100%;
 }
 
 .weekproduct-card-header {
@@ -474,18 +474,23 @@ button {
     .weekproduct-card {
         height: 100%;
         margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 200px;
     }
 
     .weekproduct-card-header {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 50px;
+        padding: 1em;
         background-color: #EEEEEE;
         font-size: 1.2rem;
     }
 
     .weekproduct-card img {
+        height: 240px;
         width: 100%;
         background: #3B3B3B no-repeat center/cover;
     }
@@ -501,7 +506,7 @@ button {
 
     .product-card-footer {
         padding: 0;
-        margin: 0;
+        margin: .1em;
         background: none;
         height: auto;
     }
@@ -509,6 +514,7 @@ button {
     .product-card-footer a button {
         padding: 7px;
         margin: 5px 0;
+        padding: 1em;
     }
 
     .hide-bigscreen {
@@ -561,7 +567,8 @@ button {
 }
 
 .weekmenu-card img {
-    max-height: 400px;
+    object-fit: cover;
+    height: 200px;
     width: 100%;
     background: #3B3B3B no-repeat center/cover;
 }
@@ -570,15 +577,43 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #EEEEEE;
+    background: #c9c9c9;
     color: #3B3B3B;
     height: 65px;
-    border-bottom: 1px #3B3B3B solid;
+}
+
+.weekmenu-card-info {
+    text-align: left;
+    color: #3B3B3B;
+    background: #c9c9c9;
+    border: #EEEEEE 1px solid;
+    height: 150px;
+    padding: 20px 10px;
+}
+
+.fa-clock::before {
+    margin-right: 4px;
+}
+
+.weekmenu-card-info span {
+    margin: 0 5px 10px 0;
+    font-size: 1rem;
+}
+
+.allergies {
+    display: flex;
+    flex-direction: row;
+}
+
+.weekmenu-card-info ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .weekmenu-card-footer {
     padding: 0.5em;
-    background-color: #EEEEEE;
+    background-color: #c9c9c9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1118,6 +1153,7 @@ footer ul {
     text-transform: uppercase;
     transition: all 0.6s;
     font-weight: bold;
+    padding: 1em;
 }
 
 .productpage-card a {
@@ -1152,6 +1188,10 @@ footer ul {
     width: 100%;
     min-width: 325px;
     color: #c9c9c9;
+}
+
+.nav-card:hover {
+    color: #6EBBD6;
 }
 
 .nav-card-container {
@@ -1239,7 +1279,6 @@ footer ul {
     background: #6EBBD6;
     color: #3B3B3B;
     padding: .2em .3em;
-    border-radius: 10px;
 }
 
 .nav-card .active {
@@ -1248,7 +1287,6 @@ footer ul {
     border-bottom: #6EBBD6 1px solid;
     background-color: #6EBBD6;
     padding: .2em .3em;
-    border-radius: 10px;
 }
 
 .nav-card .active a {
@@ -1420,6 +1458,11 @@ footer ul {
     padding: 1em;
 }
 
+.details a:hover {
+    background: #2C4B57;
+    color: #c9c9c9;
+}
+
 .details a {
     display: block;
     padding: 15px;
@@ -1430,6 +1473,15 @@ footer ul {
     text-transform: uppercase;
     text-decoration: none;
     color: black;
+    transition: all 0.5s;
+}
+
+.productmain-categorie .container:last-child {
+    margin-bottom: 150px;
+}
+
+.shoppingcard:hover .fa-cart-shopping {
+    color: #6EBBD6;
 }
 
 @media screen and (min-width: 800px) {
