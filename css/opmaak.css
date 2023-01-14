@@ -208,7 +208,7 @@ a {
 .background::after {
     content: "";
     background: #3B3B3B url(../images/background/background-longscreen.jpg);
-    opacity: 0.5;
+    opacity: 0.3;
     top: -500px;
     left: 0;
     bottom: 0;
@@ -359,7 +359,7 @@ button {
     display: none;
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1450px) {
     .flex-container {
         display: flex;
     }
@@ -373,6 +373,7 @@ button {
 
     .product-card img {
         max-height: 100%;
+        width: 480px;
         object-fit: cover;
     }
 
@@ -448,6 +449,10 @@ button {
     background-color: #EEEEEE;
 }
 
+.product-card-footer .fa-cart-shopping{
+    margin-right: 10px;
+}
+
 .product-card-footer a button {
     font-size: 0.8rem;
     width: 100%;
@@ -519,6 +524,11 @@ button {
 
     .hide-bigscreen {
         display: none;
+    }
+
+    .hide-bigscreen .container {
+        margin-bottom: 150px;
+        height: 100%;
     }
 
 }
@@ -659,7 +669,7 @@ button {
     }
 
     .last-weekmenu-card {
-        margin-bottom: 10px;
+        margin-bottom: 100px;
     }
 
 }
@@ -1111,7 +1121,8 @@ footer ul {
 }
 
 .productpage-card img {
-    max-height: 328px;
+    object-fit: cover;
+    height: 220px;
     width: 100%;
     background: #3B3B3B no-repeat center/cover;
 }
@@ -1132,7 +1143,7 @@ footer ul {
     margin: 10px;
     height: 140px;
     border-bottom: #EEEEEE 1px solid;
-    overflow-y: auto
+    overflow-y: auto;
 }
 
 .productpage-card-footer {
@@ -1170,6 +1181,10 @@ footer ul {
     .last-bigscreencontainer .productpage-card {
         margin-bottom: 150px;
     }
+
+    .productpage-card img {
+        height: 350px;
+    }
 }
 
 /* einde producten ------------------------ */
@@ -1182,7 +1197,6 @@ footer ul {
 
 .nav-card {
     background: #3B3B3B;
-    border-radius: 0;
     margin: 0;
     z-index: 10;
     width: 100%;
@@ -1206,13 +1220,12 @@ footer ul {
     background: #3B3B3B;
     display: flex;
     height: 60px;
-    border-radius: 50px 0 0 0;
     font-size: 1.3rem;
     text-transform: capitalize;
     align-items: center;
     justify-content: space-evenly;
     cursor: pointer;
-    border-bottom: 1px #c9c9c9 solid;
+    border-bottom: 1px #EEEEEE solid;
 }
 
 .nav-card-header h2 {
@@ -1294,7 +1307,7 @@ footer ul {
 }
 
 .nav-card-body {
-    padding: 0 10px 0 10px;
+    padding: 0 10px;
     display: flex;
     justify-content: space-evenly;
     max-height: 100%;
@@ -1365,6 +1378,7 @@ footer ul {
     line-height: 2;
     position: relative;
     border-bottom: 1px white solid;
+    height: 200px;
 }
 
 .data span {

@@ -1,7 +1,14 @@
+$(document).ready(function () {
+
+    // Product Categorie ******************************************************** //
+
+    var current_title = $(document).attr('title');
+
+
     // mainnav animatie
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
-    
+
     hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
@@ -13,19 +20,30 @@
     }))
     // einde mainnav animatie
 
-    // product animatie
-    const arrow = document.querySelector(".arrow");
-    const nav_card_header = document.querySelector(".nav-card-header");
+    // productnav animatie
+    if (current_title == "Van Echelpoel | Product Categorie") {
 
-    nav_card_header.addEventListener("click", () => {
-        arrow.classList.toggle("arrow-up");
-    })
+        const arrow = document.querySelector(".arrow");
+        const nav_card_header = document.querySelector(".nav-card-header");
 
-    document.querySelectorAll(".productnav-link").forEach(l => l.addEventListener("click", () => {
-        $(".nav-card-body").slideToggle("slow");
-    }))
+        nav_card_header.addEventListener("click", () => {
+            arrow.classList.toggle("arrow-up");
+        })
 
-    $(".nav-card-header").click(function () {
-        $(".nav-card-body").slideToggle("slow");
-    });
-    // einde product animatie
+        document.querySelectorAll(".productnav-link").forEach(l => l.addEventListener("click", () => {
+            $(".nav-card-body").slideToggle("slow");
+        }))
+
+        $(".nav-card-header").click(function () {
+            $(".nav-card-body").slideToggle("slow");
+        });
+
+        $(window).on("load", function () {
+            $(".nav-card-body").slideToggle("slow");
+        });
+        // einde productnav animatie
+    }
+
+    // Einde Product Categorie *************************************************** //
+
+});
