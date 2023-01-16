@@ -1,5 +1,15 @@
 @import "reset.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;600&display=swap');
+
+body {
+    font: 100%/1.4 'Libre Bodoni', serif, Arial, sans-serif;
+}
+
+p {
+    font-family:  Helvetica, Arial, sans-serif;
+}
+
 
 /* nav --------------------- */
 
@@ -439,9 +449,9 @@ button {
 }
 
 .weekproduct-card img {
-    max-height: 400px;
-    width: 100%;
-    background: #3B3B3B no-repeat center/cover;
+    height: 200px;
+    width: 167.50px;
+    object-fit: cover;
 }
 
 .product-card-footer {
@@ -454,7 +464,7 @@ button {
 }
 
 .product-card-footer a button {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -473,6 +483,24 @@ button {
 
 .last-weekproduct-card {
     margin-bottom: 150px;
+}
+
+@media screen and (min-width: 600px) {
+    .weekproduct-card img {
+        height: 300px;
+        width: 250px;
+    }
+
+    .product-card-footer a button {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .weekproduct-card img {
+        height: 350px;
+        width: 350px;
+    }
 }
 
 @media screen and (min-width: 1400px) {
@@ -740,7 +768,7 @@ button {
 
 .feestje {
     min-height: 100vh;
-    background: #3B3B3B url(../images/feestje.jpg) no-repeat center/cover;
+    background: #3B3B3B url(../images/catering/feestje.jpg) no-repeat center/cover;
 }
 
 @media screen and (min-width: 800px) {
@@ -892,6 +920,7 @@ input[type=submit] {
         background-color: #FF745C;
         color: #EEEEEE;
         width: 100%;
+        padding: 0 1.5em;
     }
 
     .nieuwsbrief-card-body img {
@@ -916,9 +945,20 @@ footer {
     width: 100%;
 }
 
+.left-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-footer p{
+    text-align: center;
+    color: #c9c9c9;
+    margin: 35px 0;
+}
+
 .left-footer img {
     display: block;
-    margin: 50px auto 50px auto;
+    margin: 50px auto;
     height: 80px;
 }
 
@@ -997,6 +1037,10 @@ footer ul {
         justify-content: flex-start;
         text-align: start;
         margin-left: 50px;
+    }
+
+    .left-footer p{
+        margin: 50px 0 20px 50px;
     }
 
     .left-footer img {
@@ -1345,6 +1389,7 @@ footer ul {
     border-radius: 50%;
     padding: 5px;
     border: 2px rgb(202, 32, 75) solid;
+    z-index: 5;
 }
 
 .categoriecard figure {
@@ -1357,6 +1402,19 @@ footer ul {
     object-fit: cover;
     height: 300px;
     width: 100%;
+    transition: opacity 1s ease-out;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+  }
+
+.hover-image:hover {
+    opacity: 1;
 }
 
 .categoriecard figcaption {
