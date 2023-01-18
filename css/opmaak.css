@@ -2,13 +2,32 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;600&display=swap');
 
-body {
+/* main ---------------------- */
+
+body h1{
     font: 100%/1.4 'Libre Bodoni', serif, Arial, sans-serif;
 }
 
 p {
     font-family:  Helvetica, Arial, sans-serif;
 }
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* einde main ---------------------- */
 
 
 /* nav --------------------- */
@@ -46,7 +65,8 @@ a {
 }
 
 .nav-link {
-    transition: 0.7s ease;
+    display: inline-block;
+    transition: all 0.7s ease;
     font-size: 1.2rem;
     padding: 5px;
 }
@@ -66,8 +86,8 @@ a {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     background-color: #6EBBD6;
 }
 
@@ -284,26 +304,6 @@ a {
 /* einde hero image ---------------------- */
 
 
-/* main ---------------------- */
-
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.flex-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-button {
-    cursor: pointer;
-}
-
-/* einde main ---------------------- */
-
-
 /* product card -------------------------- */
 
 .background h1 {
@@ -464,7 +464,6 @@ button {
 }
 
 .product-card-footer a button {
-    font-size: 0.7rem;
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -473,6 +472,7 @@ button {
     text-transform: uppercase;
     font-weight: bold;
     transition: all 0.6s;
+    font-size: .7rem;
 }
 
 .product-card-footer a button:hover {
@@ -492,7 +492,7 @@ button {
     }
 
     .product-card-footer a button {
-        font-size: 1rem;
+        font-size: .8rem;
     }
 }
 
@@ -503,7 +503,7 @@ button {
     }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1450px) {
     .weekproduct-card {
         height: 100%;
         margin: 0 10px;
@@ -519,7 +519,8 @@ button {
         align-items: center;
         padding: 1em;
         background-color: #EEEEEE;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        line-height: 1;
     }
 
     .weekproduct-card img {
@@ -617,7 +618,8 @@ button {
     justify-content: center;
     background: #c9c9c9;
     color: #3B3B3B;
-    height: 65px;
+    height: 100px;
+    padding: 1em;
 }
 
 .weekmenu-card-info {
@@ -954,6 +956,7 @@ footer {
     text-align: center;
     color: #c9c9c9;
     margin: 35px 0;
+    font-size: .8rem;
 }
 
 .left-footer img {
@@ -991,12 +994,6 @@ footer ul {
 
 .right-footer ul li {
     margin: 5px;
-}
-
-.right-footer p {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    color: #c9c9c9;
 }
 
 .right-footer ul:last-child {
@@ -1197,11 +1194,10 @@ footer ul {
     align-items: center;
 }
 
-.productpage-card-footer button {
+.productpage-card-footer a {
     font-size: 1rem;
     width: 100%;
-    margin: 0;
-    padding: 5px;
+    margin: .5em;
     border-radius: 10px;
     background: #6EBBD6;
     border: none;
@@ -1209,14 +1205,16 @@ footer ul {
     transition: all 0.6s;
     font-weight: bold;
     padding: 1em;
+    text-align: center;
+    color: #3B3B3B;
 }
 
-.productpage-card a {
+/* .productpage-card a {
     width: 100%;
     padding: 0 10px 10px 10px;
-}
+} */
 
-.productpage-card-footer button:hover {
+.productpage-card-footer a:hover {
     background: #2C4B57;
     color: #EEEEEE;
 }
@@ -1317,18 +1315,19 @@ footer ul {
     color: #c9c9c9;
     font-size: 1.2rem;
     text-decoration: none;
-    transition: all 0.3s;
+    transition: all 0.7s ease-in;
     padding: .2em .3em;
 }
 
-.nav-card a:hover {
+.nav-card ul li:hover a {
     color: #3B3B3B;
 }
 
 .nav-card ul li {
     line-height: 1.8;
-    transition: all 0.3s;
     padding: .2em .3em;
+    transition: all .5s ease-in;
+    text-transform: capitalize;
 }
 
 .nav-card ul li:hover {
@@ -1395,7 +1394,7 @@ footer ul {
 .categoriecard figure {
     width: 100%;
     height: 250px;
-    display: relative;
+    position: relative;
 }
 
 .categoriecard figure img {

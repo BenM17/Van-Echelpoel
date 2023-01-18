@@ -1,9 +1,0 @@
-Fonts used in this design:
-
-Font: Roboto Condensed
-Author: Christian Robertson
-Url: https://fonts.google.com/specimen/Roboto+Condensed
-
-Font: Anton
-Author: Vernon Adams
-Url: https://fonts.google.com/specimen/Anton
